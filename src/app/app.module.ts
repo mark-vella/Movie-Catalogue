@@ -1,22 +1,32 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { NavigationComponent } from './navigation/navigation.component';
-import { MovieListComponent } from './movie-list/movie-list.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { MovieItemComponent } from './movie-list/movie-item/movie-item.component';
+import { MoviesComponent } from './movies/movies.component';
+import { MovieItemComponent } from './movies/movie-item/movie-item.component';
+import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
+import { HomeComponent } from './home/home.component';
+
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'movies', component: MoviesComponent },
+  { path: 'movies/:id', component: MovieDetailComponent }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
     NavigationComponent,
-    MovieListComponent,
     MovieDetailComponent,
-    MovieItemComponent
+    MovieItemComponent,
+    MoviesComponent,
+    HomeComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]

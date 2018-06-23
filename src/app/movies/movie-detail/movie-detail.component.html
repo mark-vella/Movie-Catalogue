@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 text-center">
+      <img class="rounded" src="assets/images/movie-covers/{{ movie.img }}" alt="{{ movie.key }}">
+    </div>
+    <div class="col-md-8" style="display: table-cell;">
+      <h1>{{ movie.name }}</h1>
+      <p>{{ movie.description }}</p>
+      <span class="badge badge-dark" *ngFor="let genre of genres">{{ movie.genre }}</span>
+      <p>Rating: {{ movie.rate }}</p>
+      <p>Duration: {{ movie.length }}</p>
+      <button class="btn btn-primary" routerLink="/movies">Back</button>
+    </div>
+  </div>
+</div>
