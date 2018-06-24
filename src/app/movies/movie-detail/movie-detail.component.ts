@@ -11,12 +11,11 @@ import { MovieService } from '../movies.service';
 })
 export class MovieDetailComponent implements OnInit {
   imgPath = '/assets/images/movie-covers';
-
   movie: Movie;
+
   constructor(private movieService: MovieService, private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.movie = this.movieService.getSpecificMovie(+this.route.snapshot.params['id']);
   }
-
 }

@@ -1,5 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { Movie } from '../movie.model';
+import { MovieService } from '../movies.service';
 
 @Component({
   selector: 'app-movie-item',
@@ -8,17 +10,19 @@ import { Router } from '@angular/router';
 })
 export class MovieItemComponent implements OnInit {
   imgPath = '/betsson-movies/src/assets/images/movie-covers/';
-  @Input() element: { img: string, key: string, name: string, id: number };
+  @Input() movie: Movie;
+  @Input() i: number;
 
 
-  constructor(private router: Router) {
+  constructor(private movieService: MovieService, private router: Router) {
+    this.movie = this.movieService.getSpecificMovie(this.i);
   }
 
   ngOnInit() {
   }
 
   onSelectMovie() {
-    this.router.navigate(['movies', this.element.id]);
+    this.router.navigate(['movies', this.movie.id]);
   }
 
 }
