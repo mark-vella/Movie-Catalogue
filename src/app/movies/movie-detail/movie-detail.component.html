@@ -1,19 +1,20 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-6 text-center">
-      <img class="img-fluid" src="assets/images/movie-covers/{{ movie.img }}" alt="{{ movie.key }}">
+    <div class="col-md-6  text-right">
+      <img class="img-fluid movie-image" src="assets/images/movie-covers/{{ movie.img }}" alt="{{ movie.key }}">
     </div>
     <div class="col-md-6" style="display: table-cell;">
-      <h1 id="movie-name">{{ movie.name }}</h1>
-      <p id="movie-desc">{{ movie.description }}</p>
+      <h1 class="movie-name">{{ movie.name }}
+        <span style="font-size: 1rem;"> {{ movie.year }}</span>
+      </h1>
+      <p class="movie-desc">{{ movie.description }}</p>
       <span class="badge badge-dark" *ngFor="let genre of movie.genres">{{ genre | uppercase }}</span>
-      <p id="movie-length">
+      <p class="movie-length">
         <strong>Duration:</strong> {{ movie.length }}</p>
-
-      <p id="movie-rating">{{ movie.rate }}
+      <p class="movie-rating">{{ movie.rate }}
         <span style="font-size: 1rem;">/ 10</span>
       </p>
-      <button class="btn btn-primary" routerLink="/movies">Back</button>
+      <button class="btn btn-outline-dark" routerLink="/movies">BACK</button>
     </div>
   </div>
 </div>

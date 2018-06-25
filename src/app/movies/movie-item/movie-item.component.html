@@ -25,10 +25,17 @@
   </div>
 </div> -->
 
-<div class="col-sm-2" (click)="onSelectMovie()">
+<div class="col-sm-2 movie-item" (click)="onSelectMovie()">
   <figure class="figure">
     <img src="assets/images/movie-covers/{{ movie.img }}" class="figure-img img-fluid rounded" alt="{{ movie.key }}">
-    <figcaption class="figure-caption">{{ movie.name | uppercase }}</figcaption>
-    <figcaption class="figure-caption">{{ movie.rate }}</figcaption>
+    <div class="row">
+      <div class="col-sm-8">
+        <p class="movie-name">{{ movie.name }}</p>
+        <p class="movie-year">{{ movie.year }}</p>
+      </div>
+      <div class="col-sm-4">
+      <p class="movie-rate text-right">{{ movie.rate }}</p>
+      </div>
+    </div>
   </figure>
 </div>

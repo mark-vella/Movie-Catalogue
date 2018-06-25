@@ -2,26 +2,12 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { Movie } from './movie.model';
 
 @Pipe({
-  name: 'filter'
+  name: 'search'
 })
-export class FilterPipe implements PipeTransform {
-
+export class SearchPipe implements PipeTransform {
   transform(value: Movie[], filterQuery: string): Movie[] {
     filterQuery = filterQuery ? filterQuery.toLocaleLowerCase() : null;
+    // * = condition ? codeIfTrue : codeIfFalse
     return filterQuery ? value.filter((movie: Movie) => movie.name.toLocaleLowerCase().indexOf(filterQuery) !== -1) : value;
   }
 }
-
-/*     if (value.length === 0 || filterQuery === '') {
-      return value;
-    }
-
-    const queryResult = [];
-
-    for (const item of value) {
-      if (item.name === filterQuery) {
-        queryResult.push(item);
-      }
-    }
-    return queryResult;
-  } */

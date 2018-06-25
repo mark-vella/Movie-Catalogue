@@ -1,6 +1,7 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output } from '@angular/core';
 import { GenreType, Movie } from './movie.model';
 import { MovieService } from './movies.service';
+import { trigger, state, style } from '@angular/animations';
 
 @Component({
   selector: 'app-movies',
@@ -9,16 +10,32 @@ import { MovieService } from './movies.service';
   providers: [MovieService]
 })
 export class MoviesComponent implements OnInit {
-  @Input() filteredQuery: string;
-  i: number;
-
-  movieElements: Movie[] = this.movieElements = this.movieService.getMovies();
+  filteredQuery: string;
+  genreQuery: string;
+  movieElements: Movie[] = this.movieService.getMovies();
+  genres = this.movieService.getGenres();
 
   constructor(private movieService: MovieService) {
-    // this.movieElements = this.movieService.getMovies();
   }
 
   ngOnInit() {
+  }
+
+  onChangeGenre(genre: string) {
+    this.genreQuery = genre;
+  }
+
+  onClear() {
+    this.onChangeGenre('');
+    this.filteredQuery = '';
+  }
+
+  onBadSearch() {
+    if (this.filteredQuery && this.movieElements === []) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }

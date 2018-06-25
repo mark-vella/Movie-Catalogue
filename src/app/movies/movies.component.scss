@@ -1,3 +1,16 @@
-.container {
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+
+a,
+input {
+  font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
   margin-top: 25px;
+}
+
+i {
+  font-size: 25px;
+  line-height: 1.5;
 }

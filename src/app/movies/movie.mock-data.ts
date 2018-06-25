@@ -9,7 +9,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Comedy],
         rate: "8.6",
         length: "1hr 48mins",
-        img: "deadpool.jpg"
+        img: "deadpool.jpg",
+        year: 2016
     },
     {
         id: 2,
@@ -19,7 +20,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Adventure, GenreType.Comedy, GenreType.Crime],
         rate: "7.0",
         length: "1hr 50mins",
-        img: "we-are-the-millers.jpg"
+        img: "we-are-the-millers.jpg",
+        year: 2013
     },
     {
         id: 3,
@@ -29,7 +31,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Biography, GenreType.Drama, GenreType.History],
         rate: "8.0",
         length: "2hr 27mins",
-        img: "straight-outta-compton.jpg"
+        img: "straight-outta-compton.jpg",
+        year: 2015
     },
     {
         id: 4,
@@ -39,7 +42,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Crime, GenreType.Drama, GenreType.Sport],
         rate: "6.9",
         length: "2hr 5mins",
-        img: "gridiron-gang.jpg"
+        img: "gridiron-gang.jpg",
+        year: 2006
     },
     {
         id: 5,
@@ -49,7 +53,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Biography, GenreType.Crime, GenreType.Drama],
         rate: "7.8",
         length: "2hr 37mins",
-        img: "american-gangster.jpg"
+        img: "american-gangster.jpg",
+        year: 2007
     },
     {
         id: 6,
@@ -59,7 +64,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Crime, GenreType.Drama],
         rate: "6.8",
         length: "1hr 53mins",
-        img: "gangster-squad.jpg"
+        img: "gangster-squad.jpg",
+        year: 2013
     },
     {
         id: 7,
@@ -69,7 +75,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Crime, GenreType.Mystery, GenreType.Thriller],
         rate: "7.3",
         length: "1hr 55mins",
-        img: "now-you-see-me.jpg"
+        img: "now-you-see-me.jpg",
+        year: 2013
     },
     {
         id: 8,
@@ -79,7 +86,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Scifi],
         rate: "7.1",
         length: "2hr 4mins",
-        img: "jurassic-world.jpg"
+        img: "jurassic-world.jpg",
+        year: 2015
     },
     {
         id: 9,
@@ -89,7 +97,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Thriller],
         rate: "7.5",
         length: "2hr 11mins",
-        img: "mission-impossible-rogue-nation.jpg"
+        img: "mission-impossible-rogue-nation.jpg",
+        year: 2015
     },
     {
         id: 10,
@@ -99,7 +108,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Thriller],
         rate: "7.3",
         length: "1hr 56mins",
-        img: "the-man-from-uncle.jpg"
+        img: "the-man-from-uncle.jpg",
+        year: 2015
     },
     {
         id: 11,
@@ -109,7 +119,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Thriller],
         rate: "6.9",
         length: "2hr 28mins",
-        img: "spectre.jpg"
+        img: "spectre.jpg",
+        year: 2015
     },
     {
         id: 12,
@@ -119,7 +130,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Biography, GenreType.Crime, GenreType.Drama],
         rate: "7.0",
         length: "2hr 28mins",
-        img: "legend.jpg"
+        img: "legend.jpg",
+        year: 2015
     },
     {
         id: 13,
@@ -129,7 +141,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Drama, GenreType.Sport],
         rate: "7.5",
         length: "2hr 4mins",
-        img: "southpaw.jpg"
+        img: "southpaw.jpg",
+        year: 2015
     },
     {
         id: 14,
@@ -139,7 +152,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Biography, GenreType.Drama, GenreType.Thriller],
         rate: "7.7",
         length: "2hr 22mins",
-        img: "bridge-of-spies.jpg"
+        img: "bridge-of-spies.jpg",
+        year: 2015
     },
     {
         id: 15,
@@ -149,7 +163,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Adventure, GenreType.Scifi],
         rate: "7.4",
         length: "1hr 57mins",
-        img: "ant-man.jpg"
+        img: "ant-man.jpg",
+        year: 2015
     },
     {
         id: 16,
@@ -159,7 +174,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Crime, GenreType.Thriller],
         rate: "7.3",
         length: "2hr 17mins",
-        img: "fast-and-furious-7.jpg"
+        img: "fast-and-furious-7.jpg",
+        year: 2015
     },
     {
         id: 17,
@@ -169,7 +185,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Crime, GenreType.Drama],
         rate: "5.6",
         length: "1hr 34mins",
-        img: "tracers.jpg"
+        img: "tracers.jpg",
+        year: 2015
     },
     {
         id: 18,
@@ -179,7 +196,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Crime, GenreType.Drama],
         rate: "7.4",
         length: "2hr 2mins",
-        img: "running-scared.jpg"
+        img: "running-scared.jpg",
+        year: 2006
     },
     {
         id: 19,
@@ -189,7 +207,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Comedy],
         rate: "7.8",
         length: "1hr 40mins",
-        img: "the-hangover.jpg"
+        img: "the-hangover.jpg",
+        year: 2009
     },
     {
         id: 20,
@@ -199,7 +218,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Comedy, GenreType.Crime],
         rate: "6.7",
         length: "1hr 28mins",
-        img: "project-x.jpg"
+        img: "project-x.jpg",
+        year: 2012
     },
     {
         id: 21,
@@ -209,7 +229,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Crime, GenreType.Drama],
         rate: "9.0",
         length: "2hr 32mins",
-        img: "the-dark-knight.jpg"
+        img: "the-dark-knight.jpg",
+        year: 2008
     },
     {
         id: 22,
@@ -219,7 +240,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Thriller],
         rate: "6.1",
         length: "1hr 35mins",
-        img: "the-tournament.jpg"
+        img: "the-tournament.jpg",
+        year: 2009
     },
     {
         id: 23,
@@ -229,7 +251,8 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Scifi],
         rate: "8.7",
         length: "2hr 16mins",
-        img: "the-matrix.jpg"
+        img: "the-matrix.jpg",
+        year: 1999
     },
     {
         id: 24,
@@ -239,6 +262,7 @@ export const movies: Movie[] = [
         genres: [GenreType.Action, GenreType.Comedy, GenreType.Crime],
         rate: "6.8",
         length: "1hr 59mins",
-        img: "bad-boys.jpg"
+        img: "bad-boys.jpg",
+        year: 1999
     }
 ];

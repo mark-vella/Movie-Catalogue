@@ -1,12 +1,32 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" routerLink="/">MOV.IO</a>
-  <form class="form-inline my-2 my-lg-0">
-    <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" [(ngModel)]="filteredQuery" name="filteredQuery">
-  </form>
-</nav>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp"
+  crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG"
+  crossorigin="anonymous">
 
-<div class="container">
-  <div class="row justify-content-md-center">
-    <app-movie-item *ngFor="let movieElement of movieElements | alphabetical |filter:filteredQuery:'name'; let i = index" [movie]="movieElement" (click)="onSelectMovie()"></app-movie-item>
+<div class="container-fluid">
+  <div class="row justify-content-sm-center">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" placeholder="Search" aria-label="Search" [(ngModel)]="filteredQuery" name="filteredQuery"
+        (click)="filteredQuery = ''">
+    </form>
+    <i class="fas fa-times" *ngIf="genreQuery || filteredQuery" (click)="onClear()"></i>
+  </div>
+  <br>
+  <div class=" row justify-content-sm-center">
+    <ul class="nav justify-content-sm-center">
+      <li class="nav-item " *ngFor="let genre of genres">
+        <a class="nav-link " (click)="onChangeGenre(genre) ">{{ genre | uppercase }}</a>
+      </li>
+    </ul>
+    <br>
+
+  </div>
+  <hr>
+  <div class="row justify-content-sm-center">
+    <app-movie-item *ngFor="let movieElement of movieElements | alphabetical | search:filteredQuery | genre:genreQuery" [movie]="movieElement"
+      (click)="onSelectMovie()">
+    </app-movie-item>
+    <h1 *ngIf="(movieElements | search:filteredQuery).length === 0">Your search yeilded no results... 🤔</h1>
+
   </div>
 </div>

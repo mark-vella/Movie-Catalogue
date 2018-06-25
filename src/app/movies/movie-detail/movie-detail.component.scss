@@ -9,11 +9,16 @@ p {
   font-family: 'Anonymous Pro', monospace;
 }
 
-#movie-length {
+.movie-image {
+  width: 50%;
+  align-content: center;
+}
+
+.movie-length {
   margin-top: 1rem;
 }
 
-#movie-rating {
+.movie-rating {
     font-size: 3rem;
     font-weight: 700;
 }
@@ -24,4 +29,8 @@ p {
 
 .badge {
   margin-right: 5px;
+}
+
+.container {
+  margin-top: 25px;
 }

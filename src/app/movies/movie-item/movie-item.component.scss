@@ -1,6 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
 
+.row {
+  max-width: 100%;
+}
+
 .figure {
   display: flex;
   flex-direction: column;
@@ -8,8 +12,31 @@
   width: 150px;
 }
 
-figcaption {
-  font-family: 'Poppins', sans-serif;
+.movie-rate {
   font-weight: 700;
+  padding-right: 0;
+  padding-left: 25px;
+}
+
+.movie-name,
+.movie.rate {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
   color: black;
+  margin-bottom: 0;
+}
+
+.movie-year {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  color: black;
+  font-size: 0.75rem;
+}
+
+.movie-item {
+  height: 400px;
+}
+
+.movie-image {
+  max-width: 100%;
 }

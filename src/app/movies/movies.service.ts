@@ -4,6 +4,18 @@ import { Movie } from "./movie.model";
 export class MovieService {
     private movieList: Movie[] = movies;
 
+    private genres = ['action',
+        'adventure',
+        'biography',
+        'comedy',
+        'crime',
+        'drama',
+        'history',
+        'mystery',
+        'scifi',
+        'sport',
+        'thriller'];
+
     getMovies() {
         return this.movieList.slice();
     }
@@ -15,5 +27,9 @@ export class MovieService {
             }
         );
         return movie;
+    }
+
+    getGenres() {
+        return this.genres.slice();
     }
 }

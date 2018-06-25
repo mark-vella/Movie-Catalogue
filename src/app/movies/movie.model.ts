@@ -1,5 +1,3 @@
-import { GenerateOptions } from "rxjs/internal/observable/generate";
-
 export enum GenreType {
     Action = 'action',
     Adventure = 'adventure',
@@ -23,5 +21,5 @@ export class Movie {
     public rate: string;
     public length: string;
     public img: string;
-
+    public year: number;
 }
