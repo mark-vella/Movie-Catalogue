@@ -1,19 +1,20 @@
 import { Component, OnInit, Input, Output } from '@angular/core';
 import { GenreType, Movie } from './movie.model';
 import { MovieService } from './movies.service';
-import { trigger, state, style } from '@angular/animations';
+import { trigger, state, style, animate, transition, group } from '@angular/animations';
 
 @Component({
   selector: 'app-movies',
   templateUrl: './movies.component.html',
   styleUrls: ['./movies.component.scss'],
-  providers: [MovieService]
+  providers: [MovieService],
 })
 export class MoviesComponent implements OnInit {
   filteredQuery: string;
   genreQuery: string;
   movieElements: Movie[] = this.movieService.getMovies();
   genres = this.movieService.getGenres();
+  state = 'normal';
 
   constructor(private movieService: MovieService) {
   }
@@ -29,13 +30,4 @@ export class MoviesComponent implements OnInit {
     this.onChangeGenre('');
     this.filteredQuery = '';
   }
-
-  onBadSearch() {
-    if (this.filteredQuery && this.movieElements === []) {
-      return true;
-    } else {
-      return false;
-    }
-  }
-
 }

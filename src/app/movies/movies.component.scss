@@ -1,9 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
-
-a,
-input {
-  font-family: 'Poppins', sans-serif;
+a {
+  cursor: pointer;
+  input {
+    font-family: 'Poppins', sans-serif;
+  }
 }
 
 .container-fluid {

@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
 @import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
-
 .row {
   max-width: 100%;
 }
@@ -35,8 +34,26 @@
 
 .movie-item {
   height: 400px;
+  cursor: pointer;
 }
 
 .movie-image {
   max-width: 100%;
+}
+
+.image-wrapper {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  i {
+    font-size: 35px;
+  }
 }

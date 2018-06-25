@@ -1,40 +1,19 @@
-<!-- <div class="card">
-  <a (click)="onSelectMovie()">
-    <img class="card-img-top" src="assets/images/movie-covers/{{ element.img }}" alt="{{ element.key }}">
-    <div class="card-body">
-      <h5 class="card-title">{{ element.name }}</h5>
-    </div>
-  </a>
-</div> -->
-<!-- 
-<div class="col-md-3">
-  <div class="card" style="width: 13rem;" (click)="onSelectMovie()">
-    <img class="card-img-top" src="assets/images/movie-covers/{{ element.img }}" alt="{{ element.key }}">
-    <div class="card-body">
-      <p class="card-text">{{ element.name }}</p>
-    </div>
-  </div>
-</div> -->
-
-<!-- <div class="col">
-  <div class="card" (click)="onSelectMovie()">
-    <img class="card-img-top" src="assets/images/movie-covers/{{ element.img }}" alt="{{ element.key }}">
-    <div class="card-body">
-      <p class="card-text">{{ element.name | uppercase }}</p>
-    </div>
-  </div>
-</div> -->
-
 <div class="col-sm-2 movie-item" (click)="onSelectMovie()">
   <figure class="figure">
-    <img src="assets/images/movie-covers/{{ movie.img }}" class="figure-img img-fluid rounded" alt="{{ movie.key }}">
+    <div class="image-wrapper">
+      <img [@divState]="state" (mouseenter)="onHoverMovie()" (mouseleave)="onHoverMovie()" src="assets/images/movie-covers/{{ movie.img }}"
+        class="figure-img img-fluid rounded" alt="{{ movie.key }}">
+      <div [@icon]="state" class="centered-icon">
+        <i class="fas fa-film"></i>
+      </div>
+    </div>
     <div class="row">
       <div class="col-sm-8">
         <p class="movie-name">{{ movie.name }}</p>
         <p class="movie-year">{{ movie.year }}</p>
       </div>
       <div class="col-sm-4">
-      <p class="movie-rate text-right">{{ movie.rate }}</p>
+        <p class="movie-rate text-right">{{ movie.rate }}</p>
       </div>
     </div>
   </figure>
