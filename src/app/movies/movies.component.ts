@@ -1,5 +1,5 @@
-import { Component, OnInit, Input, Output } from '@angular/core';
-import { GenreType, Movie } from './movie.model';
+import { Component, OnInit } from '@angular/core';
+import { Movie } from './movie.model';
 import { MovieService } from './movies.service';
 import { trigger, state, style, animate, transition, group } from '@angular/animations';
 

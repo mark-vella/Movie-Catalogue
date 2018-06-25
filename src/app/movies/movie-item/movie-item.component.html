@@ -1,20 +1,15 @@
-<div class="col-sm-2 movie-item" (click)="onSelectMovie()">
-  <figure class="figure">
-    <div class="image-wrapper">
-      <img [@divState]="state" (mouseenter)="onHoverMovie()" (mouseleave)="onHoverMovie()" src="assets/images/movie-covers/{{ movie.img }}"
-        class="figure-img img-fluid rounded" alt="{{ movie.key }}">
-      <div [@icon]="state" class="centered-icon">
-        <i class="fas fa-film"></i>
-      </div>
+<figure class="figure" (mouseenter)="onHoverMovie()" (mouseleave)="onHoverMovie()">
+  <div class="image-wrapper">
+    <img [@divState]="state" (click)="onSelectMovie()" src="assets/images/movie-covers/{{ movie.img }}" class="figure-img img-fluid rounded"
+      alt="{{ movie.key }}">
+  </div>
+  <div class="row">
+    <div class="col-9">
+      <p class="movie-name">{{ movie.name }}</p>
+      <p class="movie-year">{{ movie.year }}</p>
     </div>
-    <div class="row">
-      <div class="col-sm-8">
-        <p class="movie-name">{{ movie.name }}</p>
-        <p class="movie-year">{{ movie.year }}</p>
-      </div>
-      <div class="col-sm-4">
-        <p class="movie-rate text-right">{{ movie.rate }}</p>
-      </div>
+<div class="col text-right movie-rate-hold">
+      <p class="movie-rate">{{ movie.rate }}</p>
     </div>
-  </figure>
-</div>
+  </div>
+</figure>

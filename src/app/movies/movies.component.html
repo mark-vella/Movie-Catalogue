@@ -1,36 +1,60 @@
+<!--
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/solid.css" integrity="sha384-TbilV5Lbhlwdyc4RuIV/JhD8NR+BfMrvz4BL5QFa2we1hQu6wvREr3v6XSRfCTRp"
   crossorigin="anonymous">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/fontawesome.css" integrity="sha384-ozJwkrqb90Oa3ZNb+yKFW2lToAWYdTiF1vt8JiH5ptTGHTGcN7qdoR1F95e0kYyG"
   crossorigin="anonymous">
 
-<div class="container-fluid">
-  <div class="navigation-wrapper">
-    <div class="row justify-content-sm-center">
-      <h1 routerLink="/">MOV.IO</h1>
-    </div>
-    <div class="row justify-content-sm-center">
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" placeholder="Search for a Movie..." aria-label="Search" [(ngModel)]="filteredQuery" name="filteredQuery"
-          (click)="filteredQuery = ''">
-      </form>
-      <i class="fas fa-times" *ngIf="genreQuery || filteredQuery" (click)="onClear()"></i>
-    </div>
-    <br>
-    <div class=" row justify-content-sm-center">
-      <ul class="nav justify-content-sm-center">
+  <div class="container" id="navigation-section">
+  <div class="row">
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" placeholder="Search for a Movie..." aria-label="Search" [(ngModel)]="filteredQuery" name="filteredQuery"
+        (click)="filteredQuery = ''">
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12 movie-genre-wrapper">
+      <ul class="nav justify-content-center">
         <li class="nav-item " *ngFor="let genre of genres">
           <a class="nav-link " (click)="onChangeGenre(genre) ">{{ genre | uppercase }}</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" *ngIf="genreQuery || filteredQuery" (click)="onClear()">CLEAR QUERIES</a>
+        </li>
       </ul>
-      <br>
+    </div>
+  </div>
+</div> -->
+
+<div class="topbar">
+  <div class="container">
+    <div class="">
+      <nav class="navbar justify-content-between">
+        <a routerLink="/" class="navbar-brand">MOV.IO</a>
+        <form class="form-inline">
+          <input class="form-control mr-sm-2 search-field" placeholder="Search" [(ngModel)]="filteredQuery" name="filteredQuery" (click)="filteredQuery = ''">
+        </form>
+      </nav>
     </div>
   </div>
 </div>
-<hr>
-<div class="container-fluid">
-  <div class="row justify-content-sm-center">
-    <app-movie-item *ngFor="let movieElement of movieElements | alphabetical | search:filteredQuery | genre:genreQuery" [movie]="movieElement"
-      (click)="onSelectMovie()"></app-movie-item>
-    <h1 *ngIf="(movieElements | search:filteredQuery).length === 0">Your search yeilded no results... 🤔</h1>
+<div class="navigation">
+  <div class="container">
+    <div class="row">
+      <div class="genre-dropdown">
+        <a (click)="onChangeGenre('')">ALL</a>
+        <a *ngFor="let genre of genres " (click)="onChangeGenre(genre)">{{ genre | uppercase }}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container " id="movies-section">
+  <div class="row ">
+    <div class="col-sm-12 movie-list-wrapper ">
+      <app-movie-item *ngFor="let movieElement of movieElements | alphabetical | search:filteredQuery | genre:genreQuery
+        " [movie]="movieElement "></app-movie-item>
+      <h1 *ngIf="(movieElements | search:filteredQuery).length===0 ">Your search yeilded no results... 🤔</h1>
+    </div>
   </div>
 </div>

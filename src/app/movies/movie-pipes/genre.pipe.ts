@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { GenreType, Movie } from './movie.model';
+import { GenreType, Movie } from '../movie.model';
 
 @Pipe({
   name: 'genre'

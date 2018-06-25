@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import { Movie } from '../movie.model';
 import { MovieService } from '../movies.service';
-import { trigger, state, style, animate, transition, group } from '@angular/animations';
+import { trigger, state, style, animate, transition } from '@angular/animations';
 
 @Component({
   selector: 'app-movie-item',
@@ -11,24 +11,13 @@ import { trigger, state, style, animate, transition, group } from '@angular/anim
   animations: [
     trigger('divState', [
       state('normal', style({
-        'filter': 'blur(0px)',
+        'opacity': '1',
       })),
       state('interested', style({
-        'filter': 'blur(2.5px)',
+        'opacity': '0.75',
       })),
       transition('normal <=> interested', [
         animate(300)
-      ])
-    ]),
-    trigger('icon', [
-      state('normal', style({
-        'display': 'none',
-      })),
-      state('interested', style({
-        'display': 'flex',
-      })),
-      transition('normal <=> interested', [
-        animate(150)
       ])
     ])
   ]

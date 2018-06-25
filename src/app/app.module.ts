@@ -9,9 +9,9 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieItemComponent } from './movies/movie-item/movie-item.component';
 import { MovieDetailComponent } from './movies/movie-detail/movie-detail.component';
 import { HomeComponent } from './home/home.component';
-import { SearchPipe } from './movies/search.pipe';
-import { AlphabeticalPipe } from './movies/alphabetical.pipe';
-import { GenrePipe } from './movies/genre.pipe';
+import { SearchPipe } from './movies/movie-pipes/search.pipe';
+import { AlphabeticalPipe } from './movies/movie-pipes/alphabetical.pipe';
+import { GenrePipe } from './movies/movie-pipes/genre.pipe';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
