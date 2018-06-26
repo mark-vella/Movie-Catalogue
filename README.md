@@ -1,27 +1,37 @@
-# BetssonMovies
+# Movies Application
+Name: 		Mov.io
+Author: 	Mark Vella
+Language: 	TypeScript 2
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.8.
+- - - -
+## Application Overview
 
-## Development server
+Upon making a request to http://localhost:4200, the user is greeted with a landing page with the ability to navigate towards the “Movie Catalogue”.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+The “Movie Catalogue” features a collection of movies, featuring the movie’s cover-art, name and year of release. The user is able to search for movies either by name through an input field within the navigation bar and/or by filtering by the movie’s genre. The subsequent clicking on a movie will result in a “Movie Detail” page, which displays all of the related movie information.
 
-## Code scaffolding
+- - - -
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Application’s Component Structure
+APP COMPONENT
+	* HOME
+	* MOVIES
+		* MOVIE ITEM
+		* MOVIE DETAIL
 
-## Build
+- - - -
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Routing Configuration
 
-## Running unit tests
+```
+const appRoutes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'movies', component: MoviesComponent },
+  { path: 'movies/:id', component: MovieDetailComponent },
+];
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- - - -
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Installing the Application
+By unzipping and downloading the source code, one may install the necessary dependencies by running the command `npm install` within the application’s directory. The application is then able to be run through the `ng serve —port 4200` command within the application’s directory.
