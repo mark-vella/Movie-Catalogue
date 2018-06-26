@@ -1,11 +1,12 @@
-@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600');
+@import '../../_utils.scss';
 
 html {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: $poppins;
 }
+
 .figure {
-  height: 310px;
-  width: 182px;
+  height: $cover-height;
+  width: $cover-width;
   margin: 25px;
 }
 
@@ -21,38 +22,24 @@ html {
   font-weight: 400;
   font-size: 1rem;
 }
+
 .movie-name {
-  color: #3f4047;
+  color: $paynes-grey;
   font-size: 14px;
   line-height: 20px;
 }
-.movie-rate-hold {
-    padding-left: 0;
 
+.movie-rate-hold {
+  padding-left: 0;
   .movie-rate {
-    font-weight: 700;
-    color: #5867dd;
+    font-weight: 400;
+    color: $puerto-rico;
     margin: 0;
+    font-size: 1.5rem
   }
 }
+
 .movie-year {
   font-size: 0.75rem;
-  color: #9699a2;
-}
-
-.image-wrapper {
-  position: relative;
-  text-align: center;
-  color: white;
-}
-
-.centered-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: none;
-  i {
-    font-size: 35px;
-  }
+  color: $manatee;
 }

@@ -1,20 +1,35 @@
-<div class="container">
-  <div class="row">
-    <div class="col-md-6  text-right">
-      <img class="img-fluid movie-image" src="assets/images/movie-covers/{{ movie.img }}" alt="{{ movie.key }}">
+<div class="topbar">
+  <div class="container">
+    <div class="">
+      <nav class="navbar justify-content-between">
+        <a routerLink="/" class="navbar-brand">MOV.IO</a>
+      </nav>
     </div>
-    <div class="col-md-6" style="display: table-cell;">
-      <h1 class="movie-name">{{ movie.name }}
-        <span style="font-size: 1rem;"> {{ movie.year }}</span>
-      </h1>
+  </div>
+</div>
+
+<div class="container ">
+  <div class="row movie-detail align-items-center">
+    
+    <div class="col-md-2"></div>
+
+    <div class="col-md-4 text-center">
+      <img class="movie-image rounded" src="assets/images/movie-covers/{{ movie.img }}" alt="{{ movie.key }}">
+    </div>
+
+    <div class="col-md-4">
+      <h1 class="movie-name">{{ movie.name }}<span class="movie-year"> {{ movie.year }}</span></h1>
+      <p class="movie-rating">{{ movie.rate }}</p>
+      <hr>
       <p class="movie-desc">{{ movie.description }}</p>
-      <span class="badge badge-dark" *ngFor="let genre of movie.genres">{{ genre | uppercase }}</span>
-      <p class="movie-length">
-        <strong>Duration:</strong> {{ movie.length }}</p>
-      <p class="movie-rating">{{ movie.rate }}
-        <span style="font-size: 1rem;">/ 10</span>
-      </p>
-      <button class="btn btn-outline-dark" routerLink="/movies">BACK</button>
+      <p class="movie-length"><strong>Duration:</strong> {{ movie.length }}</p>
+      <strong class="movie-genre" *ngFor="let genre of movie.genres">{{ genre | uppercase }}</strong>
     </div>
+
+    <div class="col-md-2"></div>
+    
+  </div>
+  <div class="row justify-content-center">
+    <button type="button" routerLink="/movies" class="btn back-button">BACK</button>
   </div>
 </div>

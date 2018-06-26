@@ -19,8 +19,7 @@ import { trigger, state, style, animate, transition } from '@angular/animations'
       transition('normal <=> interested', [
         animate(300)
       ])
-    ])
-  ]
+    ])]
 })
 export class MovieItemComponent implements OnInit {
   imgPath = '/betsson-movies/src/assets/images/movie-covers/';

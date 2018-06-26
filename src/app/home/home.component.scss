@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+@import '../_utils.scss';
 body {
   position: relative;
 }
@@ -8,7 +7,7 @@ body {
   position: absolute;
   top: 45%;
   transform: translateY(-50%);
-  font-family: 'Poppins', sans-serif;
+  font-family: $poppins;
   .landing-lead {
     font-weight: 700;
     font-size: 100px;
@@ -16,15 +15,20 @@ body {
   .landing-secondary {
     font-weight: 400;
   }
-  .landing-button {
+  .back-button {
     padding: .75rem 2rem;
-    color: white;
+    color: $solitude;
     font-size: 1rem;
     font-weight: 400;
-    font-family: Poppins;
+    font-family: $poppins;
     border-radius: 60px;
-    box-shadow: 0 5px 10px 2px rgba(88, 103, 221, .19) !important;
-    background: rgb(88, 103, 221);
-    border: rgb(88, 103, 221);
+    box-shadow: 0 5px 10px 2px rgba(78, 204, 163, .19) !important;
+    background: $puerto-rico;
+    border: $puerto-rico;
+    opacity: 1;
+    transition: opacity 300ms !important;
+    &:hover {
+      opacity: 0.5;
+    }
   }
 }

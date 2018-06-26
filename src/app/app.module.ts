@@ -36,7 +36,11 @@ const appRoutes: Routes = [
     RouterModule.forRoot(appRoutes),
     BrowserAnimationsModule
   ],
-  providers: [],
+  providers: [
+    SearchPipe,
+    AlphabeticalPipe,
+    GenrePipe
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,36 +1,107 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,700');
-@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro:400,700');
+@import '../../_utils.scss';
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+div {
+  font-family: $poppins;
+}
 
-h1 {
-  font-family: 'Poppins', sans-serif;
+h1,
+strong {
+  font-weight: 700;
 }
 
 p {
-  font-family: 'Anonymous Pro', monospace;
+  font-weight: 300;
 }
 
-.movie-image {
-  width: 50%;
-  align-content: center;
+span {
+  font-size: 1rem;
+  color: black;
 }
 
-.movie-length {
+.topbar {
+  background: $solitude;
+  .search-field {
+    border-radius: 30px;
+    box-shadow: 0 1px 15px 1px rgba(81, 77, 92, 0.08);
+    background-color: $ghost-white;
+    font-size: 13px;
+    padding-left: 20px;
+    &:focus {
+      border-color: $puerto-rico;
+    }
+  }
+  nav {
+    padding: 0.6rem 1rem;
+    .navbar-brand {
+      font-weight: 700;
+      font-size: 24px;
+      color: $bunker;
+      transition-duration: 300ms;
+      &:hover {
+        opacity: 0.5;
+        transition-duration: 300ms;
+      }
+    }
+  }
+}
+
+.back-button {
+  padding: .75rem 2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: $poppins;
+  border-radius: 60px;
+  box-shadow: 0 5px 10px 2px rgba(78, 204, 163, .19) !important;
+  background: $puerto-rico;
+  border: $puerto-rico;
+  opacity: 1;
+  transition: opacity 300ms !important;
+  &:hover {
+    opacity: 0.5;
+  }
+}
+
+.movie-detail {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.movie-name {
+  font-weight: 700;
+}
+
+.movie-desc {
   margin-top: 1rem;
+  font-size: 14px;
+  line-height: 1.25;
+  font-weight: 300;
+}
+
+.movie-genre {
+  margin-right: 10px;
+  font-weight: 300;
+  color: $nobel;
+}
+
+.movie-year {
+  font-weight: 300;
+  font-size: 1rem;
 }
 
 .movie-rating {
-    font-size: 3rem;
-    font-weight: 700;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $puerto-rico;
 }
 
-.container {
-    margin-top: 10px;
-}
-
-.badge {
-  margin-right: 5px;
-}
-
-.container {
-  margin-top: 25px;
+.movie-image {
+  width: $cover-width;
 }
