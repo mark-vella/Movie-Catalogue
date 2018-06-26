@@ -2,20 +2,26 @@
   <div class="container">
     <div class="">
       <nav class="navbar justify-content-between">
-        <a routerLink="/" class="navbar-brand">MOV.IO</a>
+        <a routerLink="/movies" class="navbar-brand">MOV.IO</a>
         <form class="form-inline">
-          <input class="form-control mr-sm-2 search-field" placeholder="Search" [(ngModel)]="filteredQuery" name="filteredQuery" (click)="filteredQuery = ''">
+          <input class="form-control mr-sm-2 search-field" placeholder="Search by Movie" [(ngModel)]="filteredQuery" name="filteredQuery"
+            (click)="filteredQuery = ''">
         </form>
       </nav>
     </div>
   </div>
 </div>
-<div class="navigation">
+
+<button (click)="onDisplayGenre()" type="button" class="btn navigation">CHOOSE A GENRE
+  <span class="caret"></span>
+</button>
+
+<div class="navigation" *ngIf="!mobile || (genreSelector && mobile)">
   <div class="container">
     <div class="row">
       <div class="genre-dropdown">
-        <a (click)="onChangeGenre('')">ALL</a>
-        <a *ngFor="let genre of genres " (click)="onChangeGenre(genre)">{{ genre | uppercase }}</a>
+        <a (click)="onChangeGenre('')" (click)="onDisplayGenre()">ALL</a>
+        <a *ngFor="let genre of genres " (click)="onChangeGenre(genre)" (click)="onDisplayGenre()">{{ genre | uppercase }}</a>
       </div>
     </div>
   </div>
@@ -23,12 +29,15 @@
 
 <div class="container " id="movies-section">
   <div class="row ">
+    <h1>{{ genreQuery | uppercase }}</h1>
     <div class="col-sm-12 movie-list-wrapper ">
       <app-movie-item *ngFor="let movieElement of movieElements | alphabetical | search:filteredQuery | genre:genreQuery
         " [movie]="movieElement "></app-movie-item>
-      <div *ngIf="(movieElements | search:filteredQuery).length === 0" class="justify-content-center">
+      <div *ngIf="((movieElements | search:filteredQuery).length === 0) || ((movieElements | search:filteredQuery | genre:genreQuery).length === 0)"
+        class="justify-content-center">
         <h1 class="text-center">Your search yeilded no results... 🤔</h1>
-        <p class="text-center">Are you sure you meant "{{ filteredQuery }}" ?</p>
+        <p class="text-center">Are you sure you meant "{{ filteredQuery | uppercase }}" ?</p>
+        <p class="text-center" *ngIf="genreQuery">Filter is set to: '{{ genreQuery | uppercase }}'.</p>
       </div>
     </div>
   </div>

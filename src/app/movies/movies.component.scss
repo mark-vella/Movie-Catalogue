@@ -1,5 +1,4 @@
 @import '../_utils.scss';
-
 h1,
 h2,
 h3,
@@ -9,11 +8,6 @@ h6,
 p,
 a,
 div {
-  font-family: $poppins;
-}
-
-.conatiner {
-  margin-top: 25px;
   font-family: $poppins;
 }
 
@@ -81,11 +75,72 @@ div {
     }
     &:first-child {
       margin-left: 0;
-      /* TODO: This breaks center-alignment on mobile */
     }
   }
 }
 
 #movies-section {
   margin-top: 15px;
+  h1 {
+    margin: 10px auto 0px;
+    font-weight: 400;
+    font-size: 33px;
+  }
+}
+
+button.navigation {
+  padding: .75rem 2rem;
+  color: white;
+  font-size: 1rem;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  border-radius: 60px;
+  box-shadow: 0 5px 10px 2px rgba(78, 204, 163, 0.19) !important;
+  background: #4ecca3;
+  border: #4ecca3;
+  opacity: 1;
+  transition: opacity 300ms !important;
+  width: 90%;
+  margin: 10px 5%;
+  display: none;
+}
+
+@media only screen and (max-width: 991px) {
+  button.navigation {
+    display: flex;
+    width: auto;
+    margin: 20px auto 0;
+  }
+  #movies-section {
+    margin-top: 0;
+    h1 {
+      margin: 25px auto 0px;
+    }
+  }
+  .navigation {
+    background: white;
+    a {
+      width: 100%;
+      margin: 0;
+      padding: 7px 0;
+      border-bottom: 1px solid $solitude;
+      color: $bunker;
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 355px) {
+  .navbar {
+    justify-content: center !important;
+    -webkit-justify-content: center !important;
+  }
+}
+
+.genre-display {
+  display: inline-block;
+}
+
+.genre-no-display {
+  display: none;
 }

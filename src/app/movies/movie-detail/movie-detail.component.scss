@@ -81,7 +81,7 @@ span {
 .movie-desc {
   margin-top: 1rem;
   font-size: 14px;
-  line-height: 1.25;
+  line-height: 1.45;
   font-weight: 300;
 }
 
@@ -89,6 +89,10 @@ span {
   margin-right: 10px;
   font-weight: 300;
   color: $nobel;
+  font-size: 12px;
+  background: $solitude;
+  padding: 5px 15px;
+  border-radius: 47px;
 }
 
 .movie-year {
@@ -100,8 +104,14 @@ span {
   font-size: 1.5rem;
   font-weight: 600;
   color: $puerto-rico;
+  line-height: 1em;
 }
 
 .movie-image {
   width: $cover-width;
+  margin-bottom: 25px;
+}
+
+.movie-length {
+  font-size: 14px;
 }
