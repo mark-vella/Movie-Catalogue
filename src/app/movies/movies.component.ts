@@ -1,7 +1,6 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 import { Movie } from './movie.model';
 import { MovieService } from './movies.service';
-import { trigger, state, style, animate, transition, group } from '@angular/animations';
 
 @Component({
   selector: 'app-movies',
@@ -42,17 +41,14 @@ export class MoviesComponent implements OnInit {
 
   onDisplayGenre() {
     this.genreSelector = !this.genreSelector;
-    console.log(this.genreSelector);
   }
 
   checkMobile() {
     this.innerWidth = window.innerWidth;
     if (this.innerWidth >= 991) {
       this.mobile = false;
-      console.log(this.mobile);
     } else {
       this.mobile = true;
-      console.log(this.mobile);
     }
   }
 
